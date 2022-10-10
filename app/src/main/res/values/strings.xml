@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Senior-Pay</string>
+    <string name="transfer_money">送金・入金</string>
+    <string name="title">シニアペイ</string>
+    <string name="how_to_use">使い方</string>
+    <string name="charge">チャージ</string>
+    <string name="history">購入履歴</string>
+    <string name="payment">支払い</string>
+    <string name="back">戻る</string>
+    <string name="check_transfer">送金/入金確認</string>
+    <string name="to_use">使い方</string>
+    <string name="internet">インターネット</string>
+    <string name="minus">500円　減らす</string>
+    <string name="plus">1000円　追加</string>
+    <string name="account">銀行口座を登録</string>
+    <string name="clear">金額を0にする</string>
+    <string name="yen">円</string>
+    <string name="before">チャージ前の金額:</string>
+    <string name="add">チャージする金額:</string>
+    <string name="after">チャージ後の金額</string>
+    <string name="camera_picture">camera picture</string>
+    <string name="yourapp">YourApp</string>
+    <string name="get_recipe">レシートを読み取る</string>
+    <string name="start_camera">カメラを起動する</string>
+    <string name="read">読み込む</string>
+    <string name="fund">送金する</string>
+    <string name="refund">入金する</string>
+    <string name="fund_check">送金する</string>
+</resources>

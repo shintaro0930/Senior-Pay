@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Main画面-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="410dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="680dp"
+        android:gravity="center"
+        android:text="@string/title"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/charge"
+        android:layout_width="183dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="40dp"
+        android:drawableTop="@android:drawable/btn_star_big_on"
+        android:text="@string/charge"
+        app:layout_constraintBottom_toTopOf="@+id/transfer"
+        app:layout_constraintEnd_toStartOf="@+id/history"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/history"
+        android:layout_width="172dp"
+        android:layout_height="175dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="44dp"
+        android:drawableTop="@android:drawable/ic_dialog_map"
+        android:text="@string/history"
+        app:layout_constraintBottom_toTopOf="@+id/how_to_use"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/transfer"
+        android:layout_width="175dp"
+        android:layout_height="165dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="104dp"
+        android:drawableTop="@android:drawable/btn_default_small"
+        android:text="@string/transfer_money"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/how_to_use"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/how_to_use"
+        android:layout_width="173dp"
+        android:layout_height="167dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="100dp"
+        android:drawableTop="@android:drawable/ic_lock_lock"
+        android:text="@string/how_to_use"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/payment"
+        android:layout_width="292dp"
+        android:layout_height="176dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:drawableTop="@android:drawable/ic_menu_send"
+        android:text="@string/payment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <Button
+        android:id="@+id/google"
+        android:layout_width="390dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/internet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.989"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
