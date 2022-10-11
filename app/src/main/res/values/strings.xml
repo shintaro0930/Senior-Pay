@@ -26,4 +26,8 @@
     <string name="fund">送金する</string>
     <string name="refund">入金する</string>
     <string name="fund_check">送金する</string>
+    <string name="already">登録済み</string>
+    <string name="research">履歴検索</string>
+    <string name="next_month">次へ</string>
+    <string name="before_month">前へ</string>
 </resources>

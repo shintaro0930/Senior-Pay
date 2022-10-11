@@ -14,6 +14,7 @@ public class DoTransfer extends AppCompatActivity implements View.OnClickListene
         setContentView(R.layout.activity_do_transfer);
 
         this.findViewById(R.id.back).setOnClickListener(this);
+        this.findViewById(R.id.fund).setOnClickListener(this);
     }
 
     @Override
@@ -22,6 +23,11 @@ public class DoTransfer extends AppCompatActivity implements View.OnClickListene
             case(R.id.back):
                 Intent go_back = new Intent(getApplication(), MainActivity.class);
                 startActivity(go_back);
+                break;
+
+            case(R.id.fund):
+                Intent go_fund = new Intent(getApplication(), SendMoney.class);
+                startActivity(go_fund);
                 break;
         }
     }
