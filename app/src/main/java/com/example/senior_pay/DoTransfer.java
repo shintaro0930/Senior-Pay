@@ -15,6 +15,7 @@ public class DoTransfer extends AppCompatActivity implements View.OnClickListene
 
         this.findViewById(R.id.back).setOnClickListener(this);
         this.findViewById(R.id.fund).setOnClickListener(this);
+        this.findViewById(R.id.refund).setOnClickListener(this);
     }
 
     @Override
@@ -28,6 +29,11 @@ public class DoTransfer extends AppCompatActivity implements View.OnClickListene
             case(R.id.fund):
                 Intent go_fund = new Intent(getApplication(), SendMoney.class);
                 startActivity(go_fund);
+                break;
+
+            case(R.id.refund):
+                Intent go_refund = new Intent(getApplication(), ReceiveMoney.class);
+                startActivity(go_refund);
                 break;
         }
     }

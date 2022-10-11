@@ -5,5 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ReceiveMoney">
+    <Button
+        android:id="@+id/back"
+        android:layout_width="114dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="60dp"
+        android:drawableLeft="?attr/actionModeCloseDrawable"
+        android:text="@string/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="409dp"
+        android:layout_height="47dp"
+        android:gravity="center"
+        android:text="入金してもらう"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001"
+        tools:layout_editor_absoluteX="1dp"
+        tools:ignore="MissingConstraints" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

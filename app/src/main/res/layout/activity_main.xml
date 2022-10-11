@@ -12,14 +12,15 @@
         android:id="@+id/title"
         android:layout_width="410dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="680dp"
         android:gravity="center"
         android:text="@string/title"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.007" />
 
     <Button
         android:id="@+id/charge"
@@ -27,12 +28,12 @@
         android:layout_height="170dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="16dp"
         android:drawableTop="@android:drawable/btn_star_big_on"
         android:text="@string/charge"
         app:layout_constraintBottom_toTopOf="@+id/transfer"
         app:layout_constraintEnd_toStartOf="@+id/history"
-        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -40,7 +41,7 @@
         android:layout_width="172dp"
         android:layout_height="175dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="20dp"
         android:drawableTop="@android:drawable/ic_dialog_map"
         android:text="@string/history"
         app:layout_constraintBottom_toTopOf="@+id/how_to_use"
@@ -73,18 +74,19 @@
 
     <Button
         android:id="@+id/payment"
-        android:layout_width="292dp"
-        android:layout_height="176dp"
+        android:layout_width="362dp"
+        android:layout_height="136dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:drawableTop="@android:drawable/ic_menu_send"
+        android:gravity="center_horizontal"
         android:text="@string/payment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"
-        app:layout_constraintVertical_bias="0.008" />
+        app:layout_constraintVertical_bias="0.109" />
 
     <Button
         android:id="@+id/google"
@@ -97,6 +99,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.989"
         tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/all_price"
+        android:layout_width="376dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="残額"
+        app:layout_constraintBottom_toBottomOf="@+id/google"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

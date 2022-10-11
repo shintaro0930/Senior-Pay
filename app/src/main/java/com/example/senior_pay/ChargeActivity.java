@@ -8,6 +8,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ChargeActivity extends AppCompatActivity implements View.OnClickListener{
+    public static int num = 10000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

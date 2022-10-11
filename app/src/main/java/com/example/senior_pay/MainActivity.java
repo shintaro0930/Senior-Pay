@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -33,11 +34,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.findViewById(R.id.payment).setOnClickListener(this);
         this.findViewById(R.id.google).setOnClickListener(this);
 
+        TextView text = findViewById(R.id.all_price);
+        int price = ChargeActivity.num;
+        Integer i = Integer.valueOf(price);
+        String str = "残額は" + i.toString() + "円です";
+        ((TextView) findViewById(R.id.all_price)).setText(str);
 
+
+        //カメラの起動
         Button cameraButton = findViewById(R.id.payment);
         cameraButton.setOnClickListener( v -> {
             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
             resultLauncher.launch(intent);
         });
     }
