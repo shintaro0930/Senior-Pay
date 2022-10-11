@@ -8,51 +8,97 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ChargeActivity extends AppCompatActivity implements View.OnClickListener{
-    //final TextView text1 = findViewById(R.id.before_yen);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_charge);
 
-        this.findViewById(R.id.back).setOnClickListener(this);
-        this.findViewById(R.id.clear).setOnClickListener(this);
-        this.findViewById(R.id.plus).setOnClickListener(this);
-        this.findViewById(R.id.minus).setOnClickListener(this);
-        this.findViewById(R.id.account).setOnClickListener(this);
-        this.findViewById(R.id.charge).setOnClickListener(this);
 
-
-
-        //EditText text1 = findViewById(R.id.before_yen);
 
     }
 
     @Override
     public void onClick(View view) {
-        switch(view.getId()) {
-            case(R.id.back):
+        switch(view.getId()) {//if分みたいなもの
+            case(R.id.back)://戻るボタンが押された時
                 Intent go_back = new Intent(getApplication(), MainActivity.class);
                 startActivity(go_back);
                 break;
 
-            case(R.id.add_yen):
-                //Calcnum(view);
+            case(R.id.account)://銀行口座が押された時
+                Intent account = new Intent(getApplication(), RegisterAccount.class);
+                startActivity(account);
                 break;
+
+            case(R.id.plus)://1000円追加が押された時
+                TextView m_text_plus = (TextView)findViewById(R.id.maintext);
+                //Editの取得
+                TextView text_add = findViewById(R.id.num_add);
+                //Edit->String
+                String str = text_add.getText().toString();
+                //str->int
+                int num = Integer.parseInt(str);
+                //和
+                if(num<20000) {
+                    int result = num + 1000;
+                    ((TextView) findViewById(R.id.num_add)).setText("" + result);
+                    m_text_plus.setText(R.string.maintext);
+                }
+                else{
+                    m_text_plus.setText(R.string.maintext_plusError);
+                }
+                break;
+
+            case(R.id.minus)://1000円減らすが押された時
+                TextView m_text_minus = (TextView)findViewById(R.id.maintext);
+                //Editの取得
+                text_add = findViewById(R.id.num_add);
+                //Edit->String
+                str = text_add.getText().toString();
+                //str->int
+                num = Integer.parseInt(str);
+                //和
+                if(num>0){
+                    int result = num - 1000;
+                    ((TextView)findViewById(R.id.num_add)).setText("" + result);
+                    m_text_minus.setText(R.string.maintext);
+                }
+                else{
+
+                }
+                break;
+
+            case(R.id.charge)://チャージが押された時
+                TextView m_text_charge = (TextView)findViewById(R.id.maintext);
+                //Editの取得
+                text_add = findViewById(R.id.num_add);
+                TextView text_before = findViewById((R.id.num_before));
+                TextView text_after = findViewById((R.id.num_after));
+                //Edit->String
+                str = text_add.getText().toString();
+                String str2 = text_before.getText().toString();
+                String str3 = text_after.getText().toString();
+                //str->int
+                num = Integer.parseInt(str);//チャージする金額のint
+                int num2 = Integer.parseInt(str2);//チャージ前の金額のint
+                int num3 = Integer.parseInt(str3);//チャージ後の金額のint
+                //処理
+                //チャージ前の金額が足りない場合
+                if(num>num2){
+                    m_text_charge.setText(R.string.maintext_chargeError);//警告文
+                }
+                else{
+                    num2-=num;//チャージ前の金額は，チャージ分減算
+                    num3+=num;//チャージ後の金額はチャージ分加算
+                    num = 0;//チャージ金額は0に戻す
+
+                    ((TextView)findViewById(R.id.num_add)).setText("" + num);
+                    ((TextView)findViewById(R.id.num_before)).setText("" + num2);
+                    ((TextView)findViewById(R.id.num_after)).setText("" + num3);
+
+                    m_text_charge.setText(R.string.maintext);//元に戻す
+                }
+
         }
-    }
-
-    //これもっと
-    public void Calcnum(View view) {
-        TextView text1 = findViewById(R.id.before_yen);
-        TextView text2 = findViewById(R.id.add_yen);
-        String str1 = text1.getText().toString();
-        String str2 = text2.getText().toString();
-        int num1 = Integer.parseInt(str1);
-        int num2 = Integer.parseInt(str2);
-        int result = num1 + num2;
-        TextView text3 = findViewById(R.id.after_yen);
-        String str3 = String.valueOf(result);
-        text3.setText(str3);
-
     }
 }

@@ -10,7 +10,7 @@
     <string name="check_transfer">送金/入金確認</string>
     <string name="to_use">使い方</string>
     <string name="internet">インターネット</string>
-    <string name="minus">500円　減らす</string>
+    <string name="minus">1000円　減らす</string>
     <string name="plus">1000円　追加</string>
     <string name="account">銀行口座を登録</string>
     <string name="clear">金額を0にする</string>
@@ -30,4 +30,18 @@
     <string name="research">履歴検索</string>
     <string name="next_month">次へ</string>
     <string name="before_month">前へ</string>
+    <string name="app_name2">Your App Name</string>
+    <string name="hint_key">company</string>
+    <string name="hint_value">US$price</string>
+    <string name="insert">insert</string>
+    <string name="read2">read</string>
+    <string name="set_0">クリアにする</string>
+    <string name="this_month">今月の会計</string>
+    <string name="num_before">10000</string>//追加
+    <string name="num_add">0</string>//追加
+    <string name="num_after">0</string>
+    <string name="maintext">チャージしたい金額を\n入力してください</string>//追加
+    <string name="maintext_chargeError">お金が足りません！</string>//追加
+    <string name="maintext_plusError">一回の上限は2万円までです！</string>//追加
+
 </resources>

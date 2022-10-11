@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.findViewById(R.id.payment).setOnClickListener(this);
         this.findViewById(R.id.google).setOnClickListener(this);
 
+
         Button cameraButton = findViewById(R.id.payment);
         cameraButton.setOnClickListener( v -> {
             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);

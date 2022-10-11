@@ -8,11 +8,12 @@
 
     <Button
         android:id="@+id/back"
-        android:layout_width="102dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="56dp"
-        android:drawableLeft="?attr/actionModeCloseDrawable"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:onClick="onClick"
         android:text="@string/back"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,88 +22,118 @@
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="409dp"
-        android:layout_height="47dp"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
         android:gravity="center"
         android:text="@string/charge"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.001"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp" />
+        app:layout_constraintVertical_bias="0.013"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/charge"
-        android:layout_width="188dp"
-        android:layout_height="88dp"
-        android:layout_marginBottom="188dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="280dp"
+        android:background="@drawable/circle_button"
+        android:onClick="onClick"
         android:text="@string/charge"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.995"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="18sp"
+        app:backgroundTint="@color/green"
+        app:layout_constraintBottom_toTopOf="@+id/plus"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
         android:id="@+id/account"
-        android:layout_width="197dp"
-        android:layout_height="88dp"
-        android:layout_marginBottom="68dp"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onClick"
         android:text="@string/account"
+        android:textSize="24sp"
+        app:backgroundTint="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/plus"
-        android:layout_width="185dp"
-        android:layout_height="72dp"
-        android:layout_marginBottom="304dp"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onClick"
         android:text="@string/plus"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="24sp"
+        app:backgroundTint="@color/red"
+        app:layout_constraintBottom_toTopOf="@+id/minus"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.929"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/minus"
-        android:layout_width="187dp"
-        android:layout_height="89dp"
-        android:layout_marginBottom="184dp"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onClick"
         android:text="@string/minus"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="24sp"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toTopOf="@+id/account"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/before"
-        android:layout_width="123dp"
+        android:layout_width="200dp"
         android:layout_height="46dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="552dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
         android:text="@string/before"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintEnd_toStartOf="@+id/before_yen"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/add"
-        android:layout_width="123dp"
+        android:layout_width="200dp"
         android:layout_height="46dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="488dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
         android:text="@string/add"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/after"
+        app:layout_constraintEnd_toStartOf="@+id/add_yen"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/after"
+        android:layout_width="200dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="420dp"
+        android:gravity="center"
+        android:text="@string/after"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/after_yen"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/before_yen"
         android:layout_width="123dp"
         android:layout_height="46dp"
-        android:layout_marginStart="236dp"
-        android:layout_marginBottom="552dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginBottom="520dp"
         android:gravity="end"
         android:text="@string/yen"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -112,8 +143,8 @@
         android:id="@+id/add_yen"
         android:layout_width="123dp"
         android:layout_height="46dp"
-        android:layout_marginStart="236dp"
-        android:layout_marginBottom="488dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginBottom="460dp"
         android:gravity="end"
         android:text="@string/yen"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -124,31 +155,56 @@
         android:layout_width="123dp"
         android:layout_height="46dp"
         android:layout_marginStart="240dp"
-        android:layout_marginBottom="420dp"
+        android:layout_marginBottom="400dp"
         android:gravity="end"
         android:text="@string/yen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/after"
-        android:layout_width="123dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="420dp"
-        android:gravity="center"
-        android:text="@string/after"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:id="@+id/num_before"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/num_before"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/before_yen"
+        app:layout_constraintEnd_toEndOf="@+id/before_yen" />
 
-    <Button
-        android:id="@+id/clear"
-        android:layout_width="164dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="304dp"
-        android:text="@string/clear"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/num_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/num_add"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/add_yen"
+        app:layout_constraintEnd_toEndOf="@+id/add_yen" />
+
+    <TextView
+        android:id="@+id/num_after"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/num_after"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/after_yen"
+        app:layout_constraintEnd_toEndOf="@+id/after_yen" />
+
+    <TextView
+        android:id="@+id/maintext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/maintext"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
