@@ -7,28 +7,6 @@
     tools:context=".LookHistory">
 
     <Button
-        android:id="@+id/before_month"
-        android:layout_width="152dp"
-        android:layout_height="103dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="24dp"
-        android:text="@string/before_month"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/next_month"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/next_month"
-        android:layout_width="147dp"
-        android:layout_height="103dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="28dp"
-        android:text="@string/next_month"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
         android:id="@+id/back"
         android:layout_width="114dp"
         android:layout_height="68dp"
@@ -63,17 +41,6 @@
         android:text="@string/history"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/text_view"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="412dp"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.422"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
     <EditText
         android:id="@+id/this_month"
         android:layout_width="414dp"
@@ -87,6 +54,93 @@
         app:layout_constraintTop_toBottomOf="@+id/title"
         app:layout_constraintVertical_bias="0.293"
         android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="103dp"
+        android:layout_height="337dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center|top"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date" />
+
+    <TextView
+        android:id="@+id/text_view2"
+        android:layout_width="121dp"
+        android:layout_height="330dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center|top"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shop"
+        app:layout_constraintVertical_bias="0.47" />
+
+    <TextView
+        android:id="@+id/text_view3"
+        android:layout_width="118dp"
+        android:layout_height="327dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center|top"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.969"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price"
+        app:layout_constraintVertical_bias="0.473" />
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="107dp"
+        android:layout_height="56dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="日時"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/shop"
+        app:layout_constraintHorizontal_bias="0.208"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.431"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/shop"
+        android:layout_width="120dp"
+        android:layout_height="56dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="場所"
+        app:layout_constraintBaseline_toBaselineOf="@+id/date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/price"
+        android:layout_width="120dp"
+        android:layout_height="56dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="金額"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintStart_toEndOf="@+id/shop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.432"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

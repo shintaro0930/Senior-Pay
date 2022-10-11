@@ -1,7 +1,6 @@
 package com.example.senior_pay;
 
 
-import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -13,22 +12,10 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LookHistory extends AppCompatActivity implements View.OnClickListener {
-    private TextView textView;
-    private TestOpenHelper helper;
-    private static final String DATABASE_NAME = "TestDB.db";
-    private static final String TABLE_NAME = "testdb";
-    private static final String _ID = "_id";
-    private static final String COLUMN_NAME_TITLE = "company";
-    private static final String COLUMN_NAME_SUBTITLE = "stockprice";
-    private SQLiteDatabase db;
-    private static final String SQL_DELETE_ENTRIES =
-            "DROP TABLE IF EXISTS " + "testdb";
 
-    private static final String SQL_CREATE_ENTRIES =
-            "CREATE TABLE " + TABLE_NAME + " (" +
-                    _ID + " INTEGER PRIMARY KEY," +
-                    COLUMN_NAME_TITLE + " TEXT," +
-                    COLUMN_NAME_SUBTITLE + " INTEGER)";
+    private TextView textView, textView2, textView3;
+    private TestOpenHelper helper2;
+    private SQLiteDatabase db2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +25,11 @@ public class LookHistory extends AppCompatActivity implements View.OnClickListen
         this.findViewById(R.id.back).setOnClickListener(this);
         this.findViewById(R.id.button).setOnClickListener(this);
 
-        startDB();
-        //データベースに繋げてみる
+        textView = findViewById(R.id.text_view);
+        textView2 = findViewById(R.id.text_view2);
+        textView3 = findViewById(R.id.text_view3);
+        readData();
+
 
     }
 
@@ -58,74 +48,23 @@ public class LookHistory extends AppCompatActivity implements View.OnClickListen
         }
     }
 
-    private void startDB() {
-
-        if(helper == null){
-            helper = new TestOpenHelper(getApplicationContext());
-        }
-        if(db == null){
-            db = helper.getWritableDatabase();
-        }
-
-        if(helper == null){
-            helper = new TestOpenHelper(getApplicationContext());
-        }
-
-        if(db == null){
-            db = helper.getReadableDatabase();
-        }
-        Log.d("debug","**********Cursor");
-
-        Cursor cursor = db.query(
-                "testdb",
-                new String[] { "company", "stockprice" },
-                null,
-                null,
-                null,
-                null,
-                null
-        );
-        db.execSQL(
-                SQL_DELETE_ENTRIES
-        );
-
-        cursor.moveToFirst();
-
-        StringBuilder sbuilder = new StringBuilder();
-
-        //for文をまるまるいらない
-        //SWL select したものをリストビューで
-        for (int i = 0; i < cursor.getCount(); i++) {
-            sbuilder.append(cursor.getString(0));
-            sbuilder.append(": ");
-            sbuilder.append(cursor.getInt(1));
-            sbuilder.append("\n");
-            cursor.moveToNext();
-        }
-
-        // 忘れずに！
-        cursor.close();
-
-        //insertData(db, "スーパー", 3400);
-        //insertData(db, "薬局", 750);
-
-        Log.d("debug","**********"+sbuilder);
-        Log.d("debug", "***sbuild***" + sbuilder.toString());
-        //ListView.setText(sbuilder.toString());
-    }
-
     private void readData(){
-        //helper.refresh(db);
-        if(helper == null){
-            helper = new TestOpenHelper(getApplicationContext());
+
+        //この1行で全てが始まる。TestOpenHelper.javaでSQLiteOpenHelperを呼んでる
+        if(helper2 == null){
+            helper2 = new TestOpenHelper(getApplicationContext());
         }
 
-        if(db == null){
-            db = helper.getReadableDatabase();
+        //ここでデータベーステーブルをcreate or open
+        if(db2 == null) {
+            db2 = helper2.getReadableDatabase();
+            //getWritableDatabase(): 書き込みをしたいときに
         }
+
+        //ログ解析
         Log.d("debug","**********Cursor");
 
-        Cursor cursor = db.query(
+        Cursor cursor = db2.query(
                 "testdb",
                 new String[] { "company", "stockprice" },
                 null,
@@ -137,30 +76,37 @@ public class LookHistory extends AppCompatActivity implements View.OnClickListen
 
         cursor.moveToFirst();
 
-        StringBuilder sbuilder = new StringBuilder();
+        StringBuilder sbuilder_date = new StringBuilder();
+        StringBuilder sbuilder_point = new StringBuilder();
+        StringBuilder sbuilder_price = new StringBuilder();
+        sbuilder_date.append("2022/10/11\n");
+        sbuilder_point.append("渋谷駅のコンビニ\n");
+        sbuilder_price.append("500円\n");
+        sbuilder_date.append("2022/10/11\n");
+        sbuilder_point.append("新宿駅のコンビニ\n");
+        sbuilder_price.append("800円\n");
+        sbuilder_date.append("2022/10/11\n");
+        sbuilder_point.append("カレーライス屋\n");
+        sbuilder_price.append("100円\n");
+        sbuilder_date.append("2022/10/11\n");
+        sbuilder_point.append("スーパー\n");
+        sbuilder_price.append("4200円\n");
 
-        for (int i = 0; i < cursor.getCount(); i++) {
-            sbuilder.append(cursor.getString(0));
-            sbuilder.append(": ");
-            sbuilder.append(cursor.getInt(1));
-            sbuilder.append("\n");
-            cursor.moveToNext();
-        }
+//        for (int i = 0; i < cursor.getCount(); i++) {
+//            sbuilder.append(cursor.getString(0));
+//            sbuilder.append(": ");
+//            sbuilder.append(cursor.getInt(1));
+//            sbuilder.append("\n");
+//            cursor.moveToNext();
+//        }
 
         // 忘れずに！
         cursor.close();
 
-        Log.d("debug","**********"+sbuilder);
-        textView.setText(sbuilder.toString());
-    }
+        //Log.d("debug","**********"+sbuilder_date);
+        textView.setText(sbuilder_date.toString());
+        textView2.setText(sbuilder_point.toString());
+        textView3.setText(sbuilder_price.toString());
 
-    private void insertData(SQLiteDatabase db, String com, int price){
-
-        ContentValues values = new ContentValues();
-        values.put("company", com);
-        values.put("stockprice", price);
-
-
-        db.insert("testdb", null, values);
     }
 }
