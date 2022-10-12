@@ -22,7 +22,9 @@ public class SendMoney extends AppCompatActivity implements View.OnClickListener
         setContentView(R.layout.activity_send_money);
 
         this.findViewById(R.id.back).setOnClickListener(this);
-        //readData();
+        name_text = findViewById(R.id.name_text);
+        phone_text = findViewById(R.id.phone_text);
+        readData();
     }
 
     @Override
@@ -77,7 +79,7 @@ public class SendMoney extends AppCompatActivity implements View.OnClickListener
         // 忘れずに！
         cursor.close();
 
-        //Log.d("debug","**********"+sbuilder_date);
+        Log.d("debug","**********"+sbuilder_date);
         name_text.setText(sbuilder_date.toString());
         phone_text.setText(sbuilder_point.toString());
 
