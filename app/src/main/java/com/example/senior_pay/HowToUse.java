@@ -7,43 +7,42 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class HowToUse extends AppCompatActivity implements View.OnClickListener {
-//画面遷移を追加
+    //画面遷移を追加
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_how_to_use);
 
-        this.findViewById(R.id.back).setOnClickListener(this);
-        this.findViewById(R.id.charge_button).setOnClickListener(this);
-        this.findViewById(R.id.look_history_button).setOnClickListener(this);
-        this.findViewById(R.id.do_payment_button).setOnClickListener(this);
+
     }
-
-
-
 
     @Override
     public void onClick(View view) {
-        switch(view.getId()) {
+        switch (view.getId()) {
             case(R.id.back):
-                Intent go_back = new Intent(getApplication(), MainActivity.class);
-                startActivity(go_back);
+                Intent go_charge = new Intent(getApplication(), MainActivity.class);
+                startActivity(go_charge);
                 break;
 
-            case(R.id.charge_button):
-                Intent how_to_charge = new Intent(getApplication(), how_to_use_charge.class);
-                startActivity(how_to_charge);
+            case(R.id.button2):
+                Intent go_history = new Intent(getApplication(), FundGuide.class);
+                startActivity(go_history);
                 break;
 
-            case(R.id.look_history_button):
-                Intent how_to_look_history = new Intent(getApplication(), HowToLookHistory.class);
-                startActivity(how_to_look_history);
+            case(R.id.button3):
+                Intent go_transfer = new Intent(getApplication(),LogGuide.class);
+                startActivity(go_transfer);
                 break;
 
-            case(R.id.do_payment_button):
-                Intent how_to_do_payment = new Intent(getApplication(), HowToDoPayment.class);
-                startActivity(how_to_do_payment);
+            case(R.id.button4):
+                Intent go_to_use = new Intent(getApplication(), ChargeGuide.class);
+                startActivity(go_to_use);
                 break;
+
         }
     }
 }
+
+
+
+

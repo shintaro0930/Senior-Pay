@@ -53,6 +53,7 @@ public class LookHistory extends AppCompatActivity implements View.OnClickListen
         //この1行で全てが始まる。TestOpenHelper.javaでSQLiteOpenHelperを呼んでる
         if(helper2 == null){
             helper2 = new TestOpenHelper(getApplicationContext());
+
         }
 
         //ここでデータベーステーブルをcreate or open

@@ -19,9 +19,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private ImageView imageView;
-    //Write Me
-    //private final TextView title = findViewById(R.id.title);
 
+    public static int money = 1000;
+
+    //private static String money = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,8 +35,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.findViewById(R.id.payment).setOnClickListener(this);
         this.findViewById(R.id.google).setOnClickListener(this);
 
+
+        //チャージされた金額の更新
+        // 現在のintentを取得する
+        //TextView text = findViewById(R.id.all_price);
+
+        //Intent intent_backed = getIntent();
+        // intentから指定キーの文字列を取得する
+        //money = intent_backed.getStringExtra( "money_after" );
+
+/**
+        if (money == null) {
+            int price = ChargeActivity.num;
+            Integer i = Integer.valueOf(price);
+            //String str = "残額は" + i.toString() + "円です";
+            ((TextView) findViewById(R.id.all_price)).setText(""+i);
+        }else{
+            //String str = "残額は" + money + "円です";
+            ((TextView) findViewById(R.id.all_price)).setText(""+money);
+        }
+**/
+        // old
         TextView text = findViewById(R.id.all_price);
-        int price = ChargeActivity.num;
+        int price = money;
         Integer i = Integer.valueOf(price);
         String str = "残額は" + i.toString() + "円です";
         ((TextView) findViewById(R.id.all_price)).setText(str);
@@ -54,7 +76,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case(R.id.charge):
                 Intent go_charge = new Intent(getApplication(), ChargeActivity.class);
+
+                go_charge.putExtra( "money", String.valueOf(ChargeActivity.num));
+
                 startActivity(go_charge);
+
+                // 遷移先から返却されてくる際の識別コード
+                //int requestCode = 1001;
+
+                // 返却値を考慮したActivityの起動を行う
+                //startActivityForResult( intent, requestCode );
+
                 break;
 
             case(R.id.history):

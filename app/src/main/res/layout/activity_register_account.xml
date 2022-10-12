@@ -35,48 +35,85 @@
         android:id="@+id/other"
         android:layout_width="108dp"
         android:layout_height="105dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="118dp"
         android:text="その他の銀行"
-        tools:layout_editor_absoluteX="213dp"
-        tools:layout_editor_absoluteY="508dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ufj"
+        app:layout_constraintTop_toBottomOf="@+id/risona" />
 
     <Button
         android:id="@+id/mizuho"
         android:layout_width="108dp"
         android:layout_height="105dp"
         android:text="みずほ銀行"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="246dp" />
+        app:layout_constraintBottom_toTopOf="@+id/smbc"
+        app:layout_constraintEnd_toStartOf="@+id/yuucho"
+        app:layout_constraintHorizontal_bias="0.626"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974" />
 
     <Button
         android:id="@+id/ufj"
         android:layout_width="108dp"
         android:layout_height="105dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="118dp"
         android:text="三菱UFJ銀行"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="508dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/other"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/smbc" />
+
 
     <Button
         android:id="@+id/smbc"
         android:layout_width="108dp"
         android:layout_height="105dp"
-        android:text="三井住友銀行"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="373dp" />
+        android:layout_marginStart="213dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="30dp"
+        android:text="りそな銀行2"
+        app:layout_constraintBottom_toTopOf="@+id/other"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yuucho"
+        app:layout_constraintVertical_bias="0.466" />
 
     <Button
         android:id="@+id/risona"
         android:layout_width="108dp"
         android:layout_height="105dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="30dp"
         android:text="りそな銀行"
-        tools:layout_editor_absoluteX="213dp"
-        tools:layout_editor_absoluteY="373dp" />
+        app:layout_constraintBottom_toTopOf="@+id/other"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/smbc"
+        app:layout_constraintTop_toBottomOf="@+id/yuucho" />
 
     <Button
         android:id="@+id/yuucho"
         android:layout_width="108dp"
         android:layout_height="105dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="29dp"
         android:text="ゆうちょ銀行"
-        tools:layout_editor_absoluteX="213dp"
-        tools:layout_editor_absoluteY="246dp" />
+        app:layout_constraintBottom_toTopOf="@+id/risona"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mizuho"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
