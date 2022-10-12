@@ -113,13 +113,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".DoPayment"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".LookHistory"
             android:exported="false">
             <meta-data

@@ -50,12 +50,8 @@
         android:layout_width="108dp"
         android:layout_height="105dp"
         android:text="みずほ銀行"
-        app:layout_constraintBottom_toTopOf="@+id/smbc"
-        app:layout_constraintEnd_toStartOf="@+id/yuucho"
-        app:layout_constraintHorizontal_bias="0.626"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.974" />
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="245dp" />
 
     <Button
         android:id="@+id/ufj"
@@ -106,14 +102,12 @@
         android:id="@+id/yuucho"
         android:layout_width="108dp"
         android:layout_height="105dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="224dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginBottom="29dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="146dp"
+        android:layout_marginEnd="110dp"
         android:text="ゆうちょ銀行"
-        app:layout_constraintBottom_toTopOf="@+id/risona"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/mizuho"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
