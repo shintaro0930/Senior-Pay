@@ -21,16 +21,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.007" />
-
+    <!--<color name="m_green">#22B157</color>
+    <color name="m_light_green">#90C64C</color>
+    <color name="m_yellow">#FBCF30</color>
+    <color name="m_red">#E96944</color>
+    <color name="m_white">#F9FDFC</color>-->
     <Button
         android:id="@+id/charge"
-        android:layout_width="183dp"
+        android:layout_width="170dp"
         android:layout_height="170dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:drawableTop="@android:drawable/btn_star_big_on"
         android:text="@string/charge"
+        android:textColor="@color/black"
+        app:backgroundTint="#90C64C"
+        android:drawableTop="@android:drawable/btn_star_big_on"
+        android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/transfer"
         app:layout_constraintEnd_toStartOf="@+id/history"
         app:layout_constraintHorizontal_bias="0.25"
@@ -38,24 +45,30 @@
 
     <Button
         android:id="@+id/history"
-        android:layout_width="172dp"
-        android:layout_height="175dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
         android:drawableTop="@android:drawable/ic_dialog_map"
         android:text="@string/history"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        app:backgroundTint="#E96944"
         app:layout_constraintBottom_toTopOf="@+id/how_to_use"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/transfer"
-        android:layout_width="175dp"
-        android:layout_height="165dp"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="104dp"
+        android:textSize="25sp"
         android:drawableTop="@android:drawable/btn_default_small"
         android:text="@string/transfer_money"
+        android:textColor="@color/black"
+        app:backgroundTint="#FBCF30"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/how_to_use"
         app:layout_constraintHorizontal_bias="0.411"
@@ -63,12 +76,15 @@
 
     <Button
         android:id="@+id/how_to_use"
-        android:layout_width="173dp"
-        android:layout_height="167dp"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="100dp"
         android:drawableTop="@android:drawable/ic_lock_lock"
         android:text="@string/how_to_use"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        app:backgroundTint="#82CAFA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -80,13 +96,13 @@
         android:layout_marginBottom="16dp"
         android:drawableTop="@android:drawable/ic_menu_send"
         android:gravity="center_horizontal"
-        android:text="@string/payment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
+        app:backgroundTint="#F9FDFC"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title"
-        app:layout_constraintVertical_bias="0.109" />
+        app:layout_constraintVertical_bias="0.098" />
 
     <Button
         android:id="@+id/google"
@@ -94,26 +110,33 @@
         android:layout_height="72dp"
         android:layout_marginEnd="8dp"
         android:text="@string/internet"
+        android:textColor="#0D47A1"
+        android:textSize="25sp"
+        app:backgroundTint="#22B157"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.989"
-        tools:ignore="MissingConstraints" />
+
+    tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/all_price"
         android:layout_width="376dp"
         android:layout_height="49dp"
         android:ems="10"
+        android:textSize="25sp"
         android:gravity="center"
         android:inputType="textPersonName"
-        android:text="残額"
+        android:text="@string/money"
         app:layout_constraintBottom_toBottomOf="@+id/google"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.096" />
+        app:layout_constraintVertical_bias="0.096"
+        android:autofillHints=""
+        tools:ignore="LabelFor" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

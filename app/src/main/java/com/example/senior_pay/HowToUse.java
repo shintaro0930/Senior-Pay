@@ -24,7 +24,7 @@ public class HowToUse extends AppCompatActivity implements View.OnClickListener 
                 startActivity(go_charge);
                 break;
 
-            case(R.id.button2):
+            case(R.id.button4):
                 Intent go_history = new Intent(getApplication(), FundGuide.class);
                 startActivity(go_history);
                 break;
@@ -34,7 +34,7 @@ public class HowToUse extends AppCompatActivity implements View.OnClickListener 
                 startActivity(go_transfer);
                 break;
 
-            case(R.id.button4):
+            case(R.id.button2):
                 Intent go_to_use = new Intent(getApplication(), ChargeGuide.class);
                 startActivity(go_to_use);
                 break;

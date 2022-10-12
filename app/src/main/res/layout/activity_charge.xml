@@ -14,6 +14,7 @@
         android:onClick="onClick"
         android:text="@string/back"
         android:textSize="24sp"
+        app:backgroundTint="@color/m_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,18 +40,20 @@
 
     <Button
         android:id="@+id/charge"
-        android:layout_width="113dp"
-        android:layout_height="109dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/circle_button"
         android:onClick="onClick"
         android:text="@string/charge"
         android:textSize="18sp"
-        app:backgroundTint="@color/green"
+        app:backgroundTint="@color/m_green"
         app:layout_constraintBottom_toTopOf="@+id/plus"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.93"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
@@ -61,7 +64,7 @@
         android:onClick="onClick"
         android:text="@string/account"
         android:textSize="24sp"
-        app:backgroundTint="@color/green"
+        app:backgroundTint="@color/m_green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -74,7 +77,7 @@
         android:onClick="onClick"
         android:text="@string/plus"
         android:textSize="24sp"
-        app:backgroundTint="@color/red"
+        app:backgroundTint="@color/m_red"
         app:layout_constraintBottom_toTopOf="@+id/minus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -87,7 +90,7 @@
         android:onClick="onClick"
         android:text="@string/minus"
         android:textSize="24sp"
-        app:backgroundTint="@color/blue"
+        app:backgroundTint="@color/m_red"
         app:layout_constraintBottom_toTopOf="@+id/account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

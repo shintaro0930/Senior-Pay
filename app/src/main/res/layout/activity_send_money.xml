@@ -8,13 +8,15 @@
 
     <Button
         android:id="@+id/back"
-        android:layout_width="114dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="60dp"
-        android:drawableLeft="?attr/actionModeCloseDrawable"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:onClick="onClick"
         android:text="@string/back"
+        android:textSize="24sp"
+        app:backgroundTint="@color/m_green"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="RtlHardcoded" />
@@ -25,6 +27,7 @@
         android:layout_height="47dp"
         android:gravity="center"
         android:text="@string/fund_check"
+        android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.001"
@@ -57,18 +60,19 @@
         app:layout_constraintVertical_bias="0.904"
         tools:ignore="MissingConstraints" />
 
-    <EditText
+    <TextView
         android:id="@+id/name_phone_title"
         android:layout_width="370dp"
-        android:layout_height="53dp"
-        android:layout_marginBottom="484dp"
+        android:layout_height="100dp"
         android:ems="10"
         android:gravity="center"
-        android:inputType="textPersonName"
-        android:text="あなたが登録したを表示しています"
+        android:text="あなたが登録した\n連絡先を表示しています"
+        android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.39"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title"
+        app:layout_constraintVertical_bias="0.169" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

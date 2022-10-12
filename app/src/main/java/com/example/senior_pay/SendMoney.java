@@ -67,14 +67,14 @@ public class SendMoney extends AppCompatActivity implements View.OnClickListener
 
         StringBuilder sbuilder_date = new StringBuilder();
         StringBuilder sbuilder_point = new StringBuilder();
-        sbuilder_date.append("2022/10/11\n");
-        sbuilder_point.append("渋谷駅のコンビニ\n");
-        sbuilder_date.append("2022/10/11\n");
-        sbuilder_point.append("新宿駅のコンビニ\n");
-        sbuilder_date.append("2022/10/11\n");
-        sbuilder_point.append("カレーライス屋\n");
-        sbuilder_date.append("2022/10/11\n");
-        sbuilder_point.append("スーパー\n");
+        sbuilder_date.append("090-1111-2222\n");
+        sbuilder_point.append("AAAさん\n");
+        sbuilder_date.append("090-2352-2532\n");
+        sbuilder_point.append("CCCさん\n");
+        sbuilder_date.append("090-8464-1234\n");
+        sbuilder_point.append("DDDさん\n");
+        sbuilder_date.append("090-8521-5235\n");
+        sbuilder_point.append("BBBさん\n");
 
         // 忘れずに！
         cursor.close();

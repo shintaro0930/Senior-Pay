@@ -5,15 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ReceiveMoney">
+
     <Button
         android:id="@+id/back"
-        android:layout_width="114dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="60dp"
-        android:drawableLeft="?attr/actionModeCloseDrawable"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:onClick="onClick"
         android:text="@string/back"
+        android:textSize="24sp"
+        app:backgroundTint="@color/m_green"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="RtlHardcoded" />
@@ -23,7 +26,8 @@
         android:layout_width="409dp"
         android:layout_height="47dp"
         android:gravity="center"
-        android:text="入金してもらう"
+        android:text="送金受け取り"
+        android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.001"
@@ -46,13 +50,14 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="あなたのQRコードを送金してもらう人に見せましょう"
+        android:text="あなたのQRコードを\n送金してもらう人に見せましょう"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/image_view_2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"
-        app:layout_constraintVertical_bias="0.812" />
+        app:layout_constraintTop_toTopOf="@+id/title"
+        app:layout_constraintVertical_bias="0.748" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
