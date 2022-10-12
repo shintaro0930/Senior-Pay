@@ -51,7 +51,8 @@
         android:layout_height="105dp"
         android:text="みずほ銀行"
         tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="245dp" />
+        tools:layout_editor_absoluteY="245dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/ufj"

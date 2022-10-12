@@ -11,4 +11,20 @@
     <color name="blue">#0000FF</color>
     <color name="green">#008000</color>
     <color name="gray">#808080</color>
+
+
+<!--    ボタン関連-->
+    <!--    ポジティブなボタン-->
+    <color name="m_green">#22B157</color>
+    <!--    ネガティブなボタン-->
+    <color name="m_red">#E96944</color>
+
+    <color name="m_light_green">#90C64C</color>
+    <color name="m_yellow">#FBCF30</color>
+    <color name="m_white">#F9FDFC</color>
+
+<!--    アプリの背景色-->
+    <color name="m_very_light_green">#DDFFDD</color>
+
+
 </resources>
