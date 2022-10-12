@@ -43,5 +43,6 @@
     <string name="maintext">チャージしたい金額を\n入力してください</string>//追加
     <string name="maintext_chargeError">お金が足りません！</string>//追加
     <string name="maintext_plusError">一回の上限は2万円までです！</string>//追加
-
+    <string name="img_description2">image2</string>
+    <string name="fund_refund">送金・入金</string>
 </resources>

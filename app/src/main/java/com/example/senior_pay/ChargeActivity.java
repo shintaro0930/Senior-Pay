@@ -39,7 +39,7 @@ public class ChargeActivity extends AppCompatActivity implements View.OnClickLis
                 //Edit->String
                 String str = text_add.getText().toString();
                 //str->int
-                int num = Integer.parseInt(str);
+                num = Integer.parseInt(str);
                 //和
                 if(num<20000) {
                     int result = num + 1000;

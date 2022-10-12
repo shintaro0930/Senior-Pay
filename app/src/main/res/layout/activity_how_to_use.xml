@@ -5,29 +5,104 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HowToUse">
-
+<!--ボタンの位置や大きさを変更-->
     <Button
         android:id="@+id/back"
-        android:layout_width="114dp"
-        android:layout_height="68dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/return_frame_style"
         android:drawableLeft="?attr/actionModeCloseDrawable"
-        android:text="@string/back"
+        android:text="戻る"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:backgroundTint="#98FB98"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="RtlHardcoded" />
 
+        tools:ignore="RtlHardcoded" />
+<!--    文字の大きさ、位置等を変更-->
     <TextView
         android:id="@+id/title"
         android:layout_width="409dp"
         android:layout_height="47dp"
         android:gravity="center"
         android:text="@string/how_to_use"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.001"
-        tools:layout_editor_absoluteX="1dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.027"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp" />
+<!--ここから新たに追加-->
+    <Button
+        android:id="@+id/look_history_button"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="購入履歴を見る"
+        android:textColor="@color/black"
+        app:backgroundTint="#98FB98"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.691" />
+
+    <Button
+        android:id="@+id/do_payment_button"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="送金・入金"
+        android:textColor="@color/black"
+        app:backgroundTint="#98FB98"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title"
+        app:layout_constraintVertical_bias="0.852" />
+
+    <Button
+        android:id="@+id/charge_button"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="チャージ機能"
+        android:textColor="@color/black"
+        app:backgroundTint="#98FB98"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title"
+        app:layout_constraintVertical_bias="0.506" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:text="Senior Payへようこそ！"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.177" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Senior Payには3つの機能があります。"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.348" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

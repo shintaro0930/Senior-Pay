@@ -3,6 +3,7 @@ package com.example.senior_pay;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,6 +15,9 @@ public class ReceiveMoney extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_receive_money);
 
         this.findViewById(R.id.back).setOnClickListener(this);
+        ImageView imageView2 = findViewById(R.id.image_view_2);
+        imageView2.setImageResource(R.drawable.img_2);
+
 
     }
 

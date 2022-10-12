@@ -10,6 +10,7 @@ public class TestOpenHelper extends SQLiteOpenHelper {
     // データーベースのバージョン
     private static final int DATABASE_VERSION = 2;
 
+
     // データーベース名
     private static final String DATABASE_NAME = "TestDB.db";
     private static final String TABLE_NAME = "testdb";

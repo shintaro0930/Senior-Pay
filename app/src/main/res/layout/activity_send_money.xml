@@ -31,75 +31,36 @@
         tools:layout_editor_absoluteX="1dp"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/phone"
-        android:layout_width="278dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="108dp"
-        android:ems="10"
-        android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:autofillHints="" />
-
-    <Button
-        android:id="@+id/research"
-        android:layout_width="171dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="404dp"
-        android:text="@string/research"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/already"
-        app:layout_constraintHorizontal_bias="0.526"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/already"
-        android:layout_width="165dp"
-        android:layout_height="75dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="404dp"
-        android:text="@string/already"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <TextView
         android:id="@+id/name_text"
-        android:layout_width="182dp"
-        android:layout_height="292dp"
+        android:layout_width="179dp"
+        android:layout_height="426dp"
         android:text=""
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="409dp" />
+        tools:layout_editor_absoluteY="274dp" />
 
     <TextView
         android:id="@+id/phone_text"
-        android:layout_width="182dp"
-        android:layout_height="292dp"
+        android:layout_width="189dp"
+        android:layout_height="428dp"
         android:text=""
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="213dp"
-        tools:layout_editor_absoluteY="409dp" />
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="273dp" />
 
     <EditText
         android:id="@+id/name_phone_title"
         android:layout_width="370dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="340dp"
+        android:layout_marginBottom="484dp"
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
-        android:text="a"
+        android:text="あなたが登録したを表示しています"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
